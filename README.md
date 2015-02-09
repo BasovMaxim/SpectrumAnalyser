@@ -18,11 +18,11 @@ This program designed by using the Qt software framework version 5.4.
   NOTE: 
    + Install Qt Multimedia module if build error " Unknown module(s) in QT: multimedia" will appear.
 
-	 $ apt-get install libqt5multimedia5       
+	 <code>$ apt-get install libqt5multimedia5</code>   
 	
    + If program can't to detect any audio-devices then try to install Qt5 multimedia plugins
      
-	 $ apt-get install libqt5multimedia5-plugins
+	 <code>$ apt-get install libqt5multimedia5-plugins</code>
 	 
 ### Build for Android.
   1. Download and install Qt for Android from http://www.qt.io/download/

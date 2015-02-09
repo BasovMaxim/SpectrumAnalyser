@@ -1,0 +1,152 @@
+QMenu {
+    border: 0px solid white;
+    padding: 1px;
+
+    background-color: rgba(255, 255, 255, 200);
+    color: rgba(255, 255, 255, 255);
+}
+
+QMenu::item {
+    width: 100;
+    padding: 2ex;
+    padding-left: 15ex;
+    margin-bottom: 1px;
+
+    background-color: rgba(0, 0, 0, 200);
+}
+
+QMenu::separator {
+    height: 0px;
+}
+
+QMenu::item:selected {
+    background-color: rgba(255, 255, 255, 200);
+    color: black;
+}
+
+QMenu::icon {
+    margin-left: 10px;
+}
+
+QToolButton {
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: window;
+}
+
+QToolButton#decrBtn {
+    min-width: 32;
+    min-height: 32;
+    border-radius: 0px;
+}
+
+QToolButton#incrBtn {
+    min-width: 32;
+    min-height: 32;
+    border-radius: 0px;
+}
+
+QToolButton:pressed {
+    background-color: rgb(150, 150, 150);
+}
+
+QToolButton:checked {
+    border: 1px solid white;
+    background-color: rgb(93, 93, 93);
+}
+
+QToolButton[popupMode="2"] { /* только для MenuButtonPopup */
+    padding-right: 10px; /* выделяем место для кнопки выпадающего списка */
+}
+
+QToolButton::menu-arrow {
+    background-color: white;
+}
+
+QToolBar
+{
+    border: 0px solid white;
+    border-radius: 0px;
+    spacing: 10px;
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(45, 45, 45, 255));
+    padding: 6px;
+    border-bottom: 1px solid white
+}
+
+QGraphicsView
+{
+    border: 0px;
+    background-color: black;
+}
+
+QSlider:horizontal {
+    min-height: 24px;
+}
+
+QSlider::groove:horizontal {
+    border: 1px solid rgb(99, 99, 99);
+    height: 1px;
+    background: rgb(99, 99, 99);
+    margin: 0px;
+}
+
+QSlider::handle:horizontal {
+    background: white;
+    border: 2px solid gray;
+    width: 19px;
+    margin: -11px 0;
+    border-radius: 11px;
+}
+
+QDialog {
+    background: white;
+    border-radius: 10px;
+}
+QComboBox {
+     border: 1px solid gray;
+     min-height: 40px;
+     background: white;
+}
+
+QComboBox:on {
+     min-height: 40px;
+}
+
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 40px;
+     height: 40px;
+     border-left-width: 1px;
+     border-left-color: darkgray;
+     border-left-style: solid;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid gray;
+}
+
+QAbstractItemView::item {
+    border-top: 1px solid gray;
+    min-height: 40px;
+}
+
+QAbstractItemView::item:selected {
+    background: lightblue;
+    color: black;
+}
+
+QPushButton {
+    border-top: 1px solid gray;
+    min-height: 30px;
+    min-width: 100px;
+    background: white;
+}
+
+QPushButton:pressed {
+    background: lightblue;
+}
+
+QPushButton#okBtn {
+    border-right: 1px solid gray;
+}

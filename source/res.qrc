@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/icons/fith.png</file>
+        <file>res/icons/fitw.png</file>
+        <file>res/icons/logo.png</file>
+        <file>res/icons/menu.png</file>
+        <file>res/icons/osci.png</file>
+        <file>res/icons/osci_48p.png</file>
+        <file>res/icons/spectr.png</file>
+        <file>res/icons/spectr_48p.png</file>
+        <file>res/icons/start.png</file>
+        <file>res/icons/stop.png</file>
+        <file>res/icons/tdaley.png</file>
+        <file>styleSheet.css</file>
+        <file>res/icons/settings_48p.png</file>
+        <file>res/icons/spectrogram_48p.png</file>
+    </qresource>
+</RCC>
