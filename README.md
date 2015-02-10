@@ -2,6 +2,8 @@
 Example of the short-time Fourier transform of audio signals.
 Program plots a real-time oscillogram and spectrogram of audio signal capturing it from an audio input device.
 
+![Screen shot](/screenshots/screenshot_1.jpg)
+
 This program designed by using the Qt software framework version 5.4.
 
 ### Build for Windows.
