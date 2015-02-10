@@ -1,6 +1,6 @@
 # SpectrumAnalyser
 Example of the short-time Fourier transform of audio signals.
-Program plots a real-time oscillogram and spectrogram of audio signal capturing it from an audio input device.
+Program plots real-time oscillogram and spectrogram of audio signal capturing the signal from an audio input device.
 
 ![Screen shot](/screenshots/screenshot_1.jpg)
 ![Screen shot](/screenshots/screenshot_2.jpg)
