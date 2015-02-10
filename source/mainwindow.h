@@ -23,8 +23,6 @@ namespace Ui {
 class MainWindow;
 }
 
-#ifndef DESKTOP
-
 // Class is necessary to for touch-screen devices
 class AProxyStyle: public QProxyStyle
 {
@@ -50,7 +48,6 @@ public:
         return QProxyStyle::styleHint(hint, option, widget, returnData);
     }
 };
-#endif
 
 /*
  * Class

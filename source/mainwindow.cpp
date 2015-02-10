@@ -7,10 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-#ifndef DESKTOP
     setStyle(new AProxyStyle());
     setStyleSheet(loadTextFromFile(":/styleSheet.css"));
-#endif
 
     initializeAudio();
     initializeIterface();
@@ -80,10 +78,8 @@ void MainWindow::initializeIterface()
     //main menu
     m_mainMenu = new QMenu(this);
 
-#ifndef DESKTOP
     m_mainMenu->setWindowFlags(m_mainMenu->windowFlags() | Qt::FramelessWindowHint);
     m_mainMenu->setAttribute(Qt::WA_TranslucentBackground); //For transparency
-#endif
 
     QActionGroup *modeActionGroupe = new QActionGroup(this);
 
@@ -187,7 +183,7 @@ void MainWindow::showSettingsDialog()
 {
     ASettingsDialog *settingsDialog = new ASettingsDialog(this);
 
-#ifndef DESKTOP
+#ifdef DESKTOP
     settingsDialog->setFixedSize(settingsDialog->size());
 #else
     settingsDialog->showMaximized();

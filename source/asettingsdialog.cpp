@@ -15,15 +15,24 @@ ASettingsDialog::ASettingsDialog(QWidget *parent)
 
     m_devices = QAudioDeviceInfo::availableDevices(QAudio::AudioInput);
 
-    foreach (QAudioDeviceInfo info, m_devices) {
-        ui->deviceComboBox->addItem(info.deviceName());
+    if(m_devices.size() > 0)
+    {
+        ui->deviceComboBox->setEnabled(true);
+        foreach (QAudioDeviceInfo info, m_devices) {
+            ui->deviceComboBox->addItem(info.deviceName());
+        }
+
+        connect(ui->deviceComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(setDeviceInfo(int)));
+        setDeviceInfo(0);
+    }
+    else
+    {
+        ui->deviceComboBox->addItem("Devices not found");
+        m_deviceIndex = -1;
     }
 
-    connect(ui->deviceComboBox, SIGNAL(currentIndexChanged(int)), this, SLOT(setDeviceInfo(int)));
     connect(ui->okBtn, &QPushButton::clicked, this, &QDialog::accept);
     connect(ui->cancelBtn, &QPushButton::clicked, this, &QDialog::reject);
-
-    setDeviceInfo(0);
 }
 
 ASettingsDialog::~ASettingsDialog()
@@ -59,18 +68,24 @@ QAudioFormat ASettingsDialog::foramt() const
 {
     QAudioFormat format = preferredFormat();
 
-    if(!m_devices.at(m_deviceIndex).isFormatSupported(format))
-        format = m_devices.at(m_deviceIndex).nearestFormat(format);
+    if(m_deviceIndex > 0)
+    {
+        if(!m_devices.at(m_deviceIndex).isFormatSupported(format))
+            format = m_devices.at(m_deviceIndex).nearestFormat(format);
 
-    format.setSampleRate(m_sampleRateSlider.currentValue());
-    format.setSampleSize(m_sampleSizeSlider.currentValue());
+        format.setSampleRate(m_sampleRateSlider.currentValue());
+        format.setSampleSize(m_sampleSizeSlider.currentValue());
+    }
 
     return format;
 }
 
 QAudioDeviceInfo ASettingsDialog::deviceInfo() const
 {
-    return m_devices.at(m_deviceIndex);
+    if(m_deviceIndex > 0)
+        return m_devices.at(m_deviceIndex);
+
+    return QAudioDeviceInfo::defaultInputDevice();
 }
 
 int ASettingsDialog::colorTheme() const

@@ -5,13 +5,13 @@ AView::AView(AInputDevice *device, QWidget *parent, APlotType type)
     , m_inputDevice{device}
 {
 
-#ifndef DESKTOP
-    setTransformationAnchor(QGraphicsView::NoAnchor);
+//#ifndef DESKTOP
+//    setTransformationAnchor(QGraphicsView::NoAnchor);
 //    setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
 //    setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
-#else
+//#else
     setTransformationAnchor(AnchorUnderMouse);
-#endif
+//#endif
     scale(1.0, -1.0); //Flip horizontal.
 
     setPlotType(type);
