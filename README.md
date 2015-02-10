@@ -12,7 +12,6 @@ This program designed by using the Qt software framework version 5.4.
   1. Download Qt Framework for Windows from http://www.qt.io/download/ (recommended the community version with  major version 5)
   2. Install Qt Framework on your system.
   3. Open .pro file in Qt-Creator IDE and build the program.
-  4. Depending on the version of Qt License may need to copy binary files of the Qt library in the program directory for run it.
   
 ### Build for Linux.
   1. If Qt is not installed on your system, install Qt. See the documentation on http://www.qt.io/.
