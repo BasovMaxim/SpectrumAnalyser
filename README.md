@@ -19,11 +19,11 @@ This program designed by using the Qt software framework version 5.4.
   3. Build program using Qt Creator.
   
   NOTE: 
-   + Install Qt Multimedia module if will appear the error " Unknown module(s) in QT: multimedia".
+   + Install Qt Multimedia module in case of the error "Unknown module(s) in QT: multimedia"
 
 	 <code>$ apt-get install libqt5multimedia5</code>   
 	
-   + If program can't to detect any audio-devices then try to install Qt5 multimedia plugins
+   + If program can't detect any audio-devices try to install Qt5 multimedia plugins
      
 	 <code>$ apt-get install libqt5multimedia5-plugins</code>
 	 
@@ -35,6 +35,6 @@ This program designed by using the Qt software framework version 5.4.
   5. Download and install NDK from http://developer.android.com/tools/sdk/ndk/index.html
   6. Download and install Apache ANT from http://ant.apache.org/bindownload.cgi
   7. Configure Qt Creator (Tools -> Options -> Android)
-  8. Open project in Qt Creator and build a packet (apk) in according with your version of ABI.
+  8. Open project in Qt Creator and build a packet (apk) according to your version of ABI.
   
-NOTE: you can to download binary files of the program from distr directory.
+NOTE: you can download binary files of the program from distr directory.
