@@ -55,3 +55,25 @@ RESOURCES += \
 
 DISTFILES += \
     styleSheet.css
+
+DEBUG_BUILD_DIR = ../debug_build
+DEBUG_TMP_DIR   = $$DEBUG_BUILD_DIR/debug_tmp
+
+RELEASE_BUILD_DIR = ../release_build
+RELEASE_TMP_DIR   = $$RELEASE_BUILD_DIR/release_tmp
+
+debug {
+    DESTDIR     = $$DEBUG_BUILD_DIR
+    OBJECTS_DIR = $$DEBUG_TMP_DIR
+    MOC_DIR     = $$DEBUG_TMP_DIR
+    RCC_DIR     = $$DEBUG_TMP_DIR 
+    UI_DIR      = $$DEBUG_TMP_DIR 
+  }
+
+release {
+    DESTDIR     = $$RELEASE_BUILD_DIR
+    OBJECTS_DIR = $$RELEASE_TMP_DIR
+    MOC_DIR     = $$RELEASE_TMP_DIR
+    RCC_DIR     = $$RELEASE_TMP_DIR
+    UI_DIR      = $$RELEASE_TMP_DIR
+  }
