@@ -23,7 +23,7 @@ namespace Ui {
 class MainWindow;
 }
 
-// Class is necessary to for touch-screen devices
+// The class is necessary for touch-screen devices
 class AProxyStyle: public QProxyStyle
 {
 public:
@@ -50,7 +50,7 @@ public:
 };
 
 /*
- * Class
+ * The mainWidow class
  */
 class MainWindow : public QMainWindow
 {
